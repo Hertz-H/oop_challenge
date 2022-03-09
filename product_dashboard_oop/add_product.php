@@ -51,7 +51,7 @@
             <div class="form-container  ">
 
                 <h3 > add product</h3>
-                <form class="row g-3  "action='add_pro.php' method='post'>
+                <form class="row g-3  "action='add_pro.php' method='post' enctype='multipart/form-data'>
                   <div class="col-md-6">
                     <label for="Proficiency" class="form-label">name</label>
                     <input type="text" class="form-control" id="Proficiency" name="name"required >
@@ -60,6 +60,11 @@
                       <label for="Proficiency" class="form-label">price</label>
                       <input type="text" class="form-control" id="Proficiency" name="price"required >
                     </div>
+                    <div class="col-md-6">
+                      <label for="Proficiency" class="form-label">image</label>
+                      <input type="file" class="form-control" id="Proficiency" name="image"required >
+                    </div>
+                    
                     <div class="col-md-12">
                       <label for="Proficiency" class="form-label">description</label>
                       <input type="text" class="form-control" id="Proficiency" name="description"required >
