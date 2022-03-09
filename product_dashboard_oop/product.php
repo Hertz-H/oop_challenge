@@ -1,7 +1,8 @@
 <?php
 include('DatabaseClass.php');
-$db_obj=new DatabaseClass();
-$result=$db_obj->display_product('products');
+// $db_obj=new DatabaseClass();
+ $db_obj=new productClass();
+$result=$db_obj->display('products');
 
 ?>
 
@@ -60,7 +61,7 @@ $result=$db_obj->display_product('products');
                               
               
                             <!-- data-bs-toggle='modal' data-bs-target='#exampleModal' -->
-                              <div class='col-12'>
+                              <div class='col-5'>
                               <?php
                               //   $connection_string=mysqli_connect("localhost","root","","e-commerce");
                               //  $result=mysqli_query($connection_string,"select * from products" );
@@ -69,8 +70,12 @@ $result=$db_obj->display_product('products');
                                   echo "
                                   <div class='card'>
                                   <div class='card-body'>
+                                   <div class='product_img'style='width:70px;height:70px;'>
+                                   <img src='images/".$row['img']."' alt=''style='width:100%;height:100%;'>
+                                   </div>
                                     <h5 class='card-title'><i  id='icon_cont'>".$row['name']."</i> <span class='company_note'>". $row['price']."</span> </h5>
                                     <h6 class='card-title'><i  id='icon_cont'>".$row['description']."</i> </h6>
+                                    
                                     <a href='edit_product.php?name=".$row['id']."&&type=products&&action=update' ><i class='fas fa-edit'>update</i></a>  <a href='controls.php?name=".$row['id']."&&type=products&&action=delete' ><i class='fas fa-edit'>delete</i></a>
                                     
                                    
@@ -81,7 +86,6 @@ $result=$db_obj->display_product('products');
                              
                               ";$index;
                                }
-
                               //  <a href='edit_product.php?name=".$row['id']." class=' edit btn edit_icon' ><i class='fas fa-edit'>update</i></a>  <a href='delete.php?name=".$db_obj->delete('products',$row['id'],'product.php')."class=' edit btn edit_icon' ><i class='fas fa-trash'>delete</i></a>
 
                                     // <a href='edit_product.php?name=".$row['id']." class=' edit btn edit_icon' ><i class='fas fa-edit'>update</i></a>  <a href='' class=' edit btn edit_icon' data-bs-toggle='modal' data-bs-target='#exampleModal'><i class='fas fa-trash'>delete</i></a>

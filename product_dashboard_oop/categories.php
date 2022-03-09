@@ -1,8 +1,8 @@
 <?php
 include('DatabaseClass.php');
-$db_obj=new DatabaseClass();
-$result=$db_obj->display_cat('category');
-
+// $db_obj=new DatabaseClass();
+$db_obj=new  catClass();
+$result=$db_obj->display('category');
 ?>
 
 
