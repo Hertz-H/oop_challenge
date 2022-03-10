@@ -62,9 +62,9 @@
                         $result=$db_obj->display_selected('products',$_GET["name"]);
                         $row=mysqli_fetch_assoc($result);
                                ?>
-            <div class='form-container '>
+                       <div class='form-container '>
                          <h3 > edit product</h3>
-                         <form class='row g-3  'action='controls.php?action=update&&type=products' method='post'>
+                         <form class='row g-3  'action='controls.php?action=update&&type=products'enctype='multipart/form-data' method='post'>
                            <div class='col-md-6'>
                              <label for='Proficiency' class='form-label'>name</label>
                             
@@ -75,6 +75,10 @@
                                <label for='Proficiency' class='form-label'>price</label>
                                <input type='text' class='form-control' id='Proficiency' name='price'required value=<?php echo $row['price'] ;?>  >
                              </div>
+                             <div class="col-md-6">
+                            <label for="Proficiency" class="form-label">image</label>
+                            <input type="file" class="form-control" id="Proficiency" name='image' value=<?php echo $row['img'] ;?> required >
+                          </div>
                              <div class='col-md-12'>
                                <label for='Proficiency' class='form-label'>description</label>
                                <input type='text' class='form-control' id='Proficiency' name='description'required value=<?php echo $row['description'] ;?>  >

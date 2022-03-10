@@ -62,12 +62,12 @@
             <div class='form-container '>
                          <h3 > edit category</h3>
                          <form class='row g-3  'action='controls.php?action=update&&type=category' method='post'>
-                           <div class='col-md-6'>
+                           <div class='col-md-12'>
                              <label for='Proficiency' class='form-label'>name</label>
                             
                              <input type='text' class='form-control' id='Proficiency' name='name'required value=<?php echo $row['name'] ;?> >
                              <input type='text' style="display:none;"class='form-control' id='Proficiency' name='id'required value=<?php echo $row['id'] ;?> >
-                           
+                             </div>
                              <div class='col-2'>
                                <button type='submit' class='btn save '>edit</button>
                              </div>

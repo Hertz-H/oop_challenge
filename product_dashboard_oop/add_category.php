@@ -50,24 +50,12 @@
            
             <div class="form-container  ">
 
-                <h3 > add product</h3>
-                <form class="row g-3  "action='controls.php?type=products&&action=add' method='post' enctype='multipart/form-data'>
-                  <div class="col-md-6">
-                    <label for="Proficiency" class="form-label">name</label>
-                    <input type="text" class="form-control" id="Proficiency" name="name"required >
-                  </div>
-                    <div class="col-md-6">
-                      <label for="Proficiency" class="form-label">price</label>
-                      <input type="text" class="form-control" id="Proficiency" name="price"required >
-                    </div>
-                    <div class="col-md-6">
-                      <label for="Proficiency" class="form-label">image</label>
-                      <input type="file" class="form-control" id="Proficiency" name="image"required >
-                    </div>
-                    
+                <h3 > add category</h3>
+                <form class="row g-3  "action='controls.php?type=category&&action=add' method='post' >
+                
                     <div class="col-md-12">
-                      <label for="Proficiency" class="form-label">description</label>
-                      <input type="text" class="form-control" id="Proficiency" name="description"required >
+                      <label for="Proficiency" class="form-label">Name</label>
+                      <input type="text" class="form-control" id="Proficiency" name="name"required >
                     </div>
                     <div class="col-2">
                       <button type="submit" class="btn save">Save</button>

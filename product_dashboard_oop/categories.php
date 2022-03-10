@@ -1,8 +1,8 @@
 <?php
 include('DatabaseClass.php');
-$db_obj=new DatabaseClass();
-$result=$db_obj->display_cat('category');
-
+// $db_obj=new DatabaseClass();
+$db_obj=new  catClass();
+$result=$db_obj->display('category');
 ?>
 
 
@@ -55,7 +55,7 @@ $result=$db_obj->display_cat('category');
         
         <div class='form-container  '>
             <div class='skills_info'>
-                <h3 class='d-inline'> categories</h3> <a class='add add_skls 'href='add_product.php'> add</a>
+                <h3 class='d-inline'> categories</h3> <a class='add add_skls 'href='add_category.php'> add</a>
                             <div class='row g-2'>
                               
               
